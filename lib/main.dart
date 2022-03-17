@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 4, vsync: this);
+    _tabController = TabController(length: 3, vsync: this);
   }
 
   @override
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           icon: Icon(Icons.arrow_back, color: Color(0XFF545D68)),
           onPressed: () {},
         ), // IconButton
-        title: const Text('Marjane',
+        title: const Text('Pickup',
             style: TextStyle(
                 fontFamily: 'Varela',
                 fontSize: 20.0,
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
         padding: EdgeInsets.only(left: 20.0),
         children: <Widget>[
           SizedBox(height: 15.0),
-          Text('Service',
+          Text('Categories',
               style: TextStyle(
                   fontFamily: 'Varela',
                   fontSize: 42.0,
@@ -96,34 +96,27 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
           TabBar(
               controller: _tabController,
               indicatorColor: Colors.transparent,
-              labelColor: Color.fromARGB(255, 53, 50, 200),
+              labelColor: Color(0xFFC88D67),
               isScrollable: true,
               labelPadding: EdgeInsets.only(right: 45.0),
-              unselectedLabelColor: Color.fromARGB(103, 53, 50, 205),
+              unselectedLabelColor: Color(0xFFCDCDCD),
               tabs: [
                 Tab(
-                  child: Text('Confort Praticipe',
+                  child: Text('Cookies',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
                       )),
                 ),
                 Tab(
-                  child: Text('Service',
+                  child: Text('Cookie cake',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
                       )),
                 ),
                 Tab(
-                  child: Text('Libre Service',
-                      style: TextStyle(
-                        fontFamily: 'Varela',
-                        fontSize: 21.0,
-                      )),
-                ),
-                Tab(
-                  child: Text('Caisses',
+                  child: Text('Ice cream',
                       style: TextStyle(
                         fontFamily: 'Varela',
                         fontSize: 21.0,
@@ -134,7 +127,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
               height: MediaQuery.of(context).size.height - 50.0,
               width: double.infinity,
               child: TabBarView(controller: _tabController, children: [
-                CookiePage(),
                 CookiePage(),
                 CookiePage(),
                 CookiePage(),
